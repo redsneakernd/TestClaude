@@ -1,0 +1,9 @@
+.claude/
+__pycache__/
+*.py[cod]
+*.pyo
+.DS_Store
+*.egg-info/
+.env
+.venv/
+venv/
