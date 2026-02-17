@@ -188,11 +188,20 @@ else:
         )
         filt = filt[mask]
 
-    # ── Summary metrics ───────────────────────────────────────────────────
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Churches Shown",    f"{len(filt):,}")
+    # ── Summary metrics + top-level download ─────────────────────────────
+    col1, col2, col3, col4 = st.columns([2, 2, 2, 3])
+    col1.metric("Churches Shown",     f"{len(filt):,}")
     col2.metric("States Represented", filt["State"].nunique())
     col3.metric("Total in Directory", f"{len(cd):,}")
+    with col4:
+        csv_all = filt.to_csv(index=False).encode("utf-8")
+        st.download_button(
+            label="⬇️ Download Full Directory as CSV",
+            data=csv_all,
+            file_name="church_directory.csv",
+            mime="text/csv",
+            use_container_width=True,
+        )
 
     st.divider()
 
