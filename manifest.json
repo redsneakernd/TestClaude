@@ -1,0 +1,15 @@
+{
+  "name": "Bismarck-Mandan Location Scout",
+  "short_name": "Location Scout",
+  "description": "Browse, filter, and shortlist portrait session locations around Bismarck and Mandan, North Dakota.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#faf7f2",
+  "theme_color": "#2b2118",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
